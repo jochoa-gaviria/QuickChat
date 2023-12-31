@@ -1,0 +1,14 @@
+<section class="container"> 
+    <input 
+    type="text"
+    class="cellphone-input"
+    [class.error] = "phoneNumberCtrl.invalid && phoneNumberCtrl.dirty"
+    autofocus
+    placeholder="Phone number"
+    (keyup)="onInputSubmit()"
+    [formControl] = "phoneNumberCtrl">
+
+    @if (phoneNumberCtrl.invalid && phoneNumberCtrl.dirty) {
+        <p class="error-input">Ups! the phone number is invalid. Try another one</p>
+    }
+</section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-qr',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './qr.component.scss'
 })
 export class QrComponent {
-
+  @Input() phoneNumber?: string;
 }
