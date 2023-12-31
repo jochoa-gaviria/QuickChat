@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './not-found.component.scss'
 })
 export class NotFoundComponent {
-
+  ErrorMessage = 'Sorry, nothing to see here :('
 }
