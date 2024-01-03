@@ -1,0 +1,45 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 70px;
+
+    .social-media--wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        max-width: 600px;
+        margin: 45px auto;
+    }
+
+    li {
+        display: inline-block;
+        
+        &:hover {
+            color: #9AD0C2;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ECF4D6;
+            font-style: normal;
+            
+            .icon {
+                font-size: .9rem;
+                width: 10px;
+            }
+        }
+    }
+
+
+    .link {
+        margin-right: 8px;
+    }
+
+    .copyright {
+        text-align: center;
+        color: #ECF4D6;
+    }
+}

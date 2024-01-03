@@ -1,1 +1,15 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="social-media">
+        <ul class="social-media--wrapper">
+            @for (item of socialMediaItems; track $index) {
+            <li>
+                <a [href]="item.url" target="_blank" class="link">
+                    <i class="icon"><img [src]="item.iconPath" alt="x-twitter">{{item.title}}</i>
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+    <div class="line-through"></div>
+    <p class="copyright">Copyright &copy; 2024</p>
+</footer>
