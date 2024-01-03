@@ -23,8 +23,8 @@ export class PhoneNumberComponent {
 
   onInputSubmit() {
     if (this.phoneNumberCtrl.valid) {
-      const phoneNumberValue = this.phoneNumberCtrl.value
-      const phoneNumberCleaned = phoneNumberValue.replace(this.NON_NUMBER_REGEX, "");
+      let phoneNumberValue = this.phoneNumberCtrl.value
+      let phoneNumberCleaned = phoneNumberValue.replace(this.NON_NUMBER_REGEX, "");
       this.validNumberEvent.emit(phoneNumberCleaned);
     }
   }

@@ -5,5 +5,7 @@
 }
 
 body {
-  background-color: #ECF4D6;
+  background: rgb(154,208,194);
+  background: linear-gradient(90deg, rgba(154,208,194,1) 0%, rgba(45,149,150,1) 50%, rgba(38,80,115,1) 100%);
+  margin: 0;
 }

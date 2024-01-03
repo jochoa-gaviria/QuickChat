@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { QrRoutingModule } from './qr-routing.module';
 import { QrComponent } from './components/qr/qr.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { PhoneNumberComponent } from './components/phone-number/phone-number.component';
 import { ReactiveFormsModule } from '@angular/forms';
 

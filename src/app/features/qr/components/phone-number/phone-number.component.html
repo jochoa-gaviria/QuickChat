@@ -8,7 +8,9 @@
     (keyup)="onInputSubmit()"
     [formControl] = "phoneNumberCtrl">
 
-    @if (phoneNumberCtrl.invalid && phoneNumberCtrl.dirty) {
-        <p class="error-input">Ups! the phone number is invalid. Try another one</p>
-    }
+    <p 
+        class="error-input" 
+        [class.active]="phoneNumberCtrl.invalid && phoneNumberCtrl.dirty">
+        Ups! the phone number is invalid. Try another one
+    </p>
 </section>

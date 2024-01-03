@@ -1,0 +1,28 @@
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 230px;
+    max-width: 550px;
+    margin: 0 auto;
+
+    .container {
+        background: #F6F3E2;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #ECF4D6;
+        text-shadow: 0 0 1px #265073, 0 0 1px #265073;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 3em;
+        font-weight: 200;
+        padding-top: 2.5em;
+        padding-bottom: .4em;
+        margin: 0;
+    }
+}
