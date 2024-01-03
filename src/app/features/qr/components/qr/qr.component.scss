@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all linear .4s;
+
+    &.show {
+        opacity: 1;
+    }
+
+    .qr-container {
+        cursor: pointer;
+    }
+
+    .click-me {
+        font-size: 18px;
+        align-self: flex-end;
+        padding: 0 .6em .6em 0;
+    }
+} 

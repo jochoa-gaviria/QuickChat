@@ -11,4 +11,8 @@ export class HomeComponent {
   onValidNumberEvent(event: string) {
     this.phoneNumber = event
   }
+
+  onInvalidNumberEvent() {
+    this.phoneNumber = '';
+  }
 }

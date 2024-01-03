@@ -6,18 +6,22 @@ import { QrComponent } from './components/qr/qr.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PhoneNumberComponent } from './components/phone-number/phone-number.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { QrCodeModule } from 'ng-qrcode';
+import { UrlComponent } from './components/url/url.component';
 
 
 @NgModule({
   declarations: [
     QrComponent,
     HomeComponent,
-    PhoneNumberComponent
+    PhoneNumberComponent,
+    UrlComponent
   ],
   imports: [
     CommonModule,
     QrRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QrCodeModule
   ]
 })
 export class QrModule { }

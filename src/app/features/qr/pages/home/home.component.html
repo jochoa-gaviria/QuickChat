@@ -1,7 +1,7 @@
 <main>
     <h1>Welcome to QuickChat</h1>
-    <app-phone-number (validNumberEvent)="onValidNumberEvent($event)"></app-phone-number>
-    <div class="container">
+    <app-phone-number (validNumberEvent)="onValidNumberEvent($event)" (invalidNumberEvent)="onInvalidNumberEvent()"></app-phone-number>
+    <div class="container" [class.show]="phoneNumber != ''">
         <app-qr [phoneNumber]="phoneNumber"></app-qr>
     </div>
 </main>
