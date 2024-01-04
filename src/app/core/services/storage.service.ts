@@ -5,7 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root'
 })
 export class LocalStorageService {
-  private phoneStorageKey = 'phoneNumber';
+  private phoneStorageKey = 'phoneNumber'; //TODO: take it from env
 
   constructor(private cookieService: CookieService) { }
   

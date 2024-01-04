@@ -14,19 +14,19 @@ export class FooterComponent {
       title: 'X',
       alternativeText: 'X-Twitter',
       iconPath: './assets/svg/x-twitter.svg',
-      url: 'https://twitter.com/ochoa_jdav'
+      url: 'https://twitter.com/ochoa_jdav' ////TODO: take it from env
     },
     {
       title: 'GitHub',
       alternativeText: 'GitHub',
       iconPath: './assets/svg/github.svg',
-      url: 'https://github.com/jochoa-gaviria'
+      url: 'https://github.com/jochoa-gaviria' ////TODO: take it from env
     },
     {
       title: 'LinkedIn',
       alternativeText: 'LinkedIn',
       iconPath: './assets/svg/linkedIn.svg',
-      url: 'https://www.linkedin.com/in/jochoa-gaviria/'
+      url: 'https://www.linkedin.com/in/jochoa-gaviria/' //TODO: take it from env
     }
   ]
 }
