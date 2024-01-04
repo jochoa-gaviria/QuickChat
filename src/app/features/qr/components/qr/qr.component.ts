@@ -9,7 +9,7 @@ import { UrlData } from '@qr/models/url-data';
 })
 export class QrComponent {
   private URL_BASE = 'https://api.whatsapp.com/send?phone=';
-  MESSAGE_URL = "Don't you have a camera? Click me"; 
+  MESSAGE_URL = "Don't you have a camera? Click here"; 
   apiUrlData?: UrlData;
 
   @Input({ required: true }) set phoneNumber(phoneNumber: string) {
