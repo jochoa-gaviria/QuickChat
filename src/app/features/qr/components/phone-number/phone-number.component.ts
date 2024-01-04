@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { LocalStorageService } from '../../../../core/services/storage.service';
 
@@ -13,6 +13,8 @@ export class PhoneNumberComponent implements OnInit {
   private NON_NUMBER_REGEX = new RegExp(/\D/g);
   private SOME_TIME_WAS_VALID = false;
 
+  private localStorageService = inject(LocalStorageService);
+
   phoneNumberCtrl = new FormControl("", {
     nonNullable: true,
     validators: [
@@ -20,8 +22,6 @@ export class PhoneNumberComponent implements OnInit {
       Validators.pattern(this.PHONE_NUMBER_REGEX)
     ]
   });
-
-  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
     const storage = this.localStorageService.getPhoneNumberItem();

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SocialMediaItem } from '../../models/social-media-item';
+import { SocialMediaItem } from '../../models/social-media-item.model';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
   selector: 'app-footer',
@@ -14,19 +15,19 @@ export class FooterComponent {
       title: 'X',
       alternativeText: 'X-Twitter',
       iconPath: './assets/svg/x-twitter.svg',
-      url: 'https://twitter.com/ochoa_jdav' ////TODO: take it from env
+      url: environment.twitterUrl
     },
     {
       title: 'GitHub',
       alternativeText: 'GitHub',
       iconPath: './assets/svg/github.svg',
-      url: 'https://github.com/jochoa-gaviria' ////TODO: take it from env
+      url: environment.githubUrl
     },
     {
       title: 'LinkedIn',
       alternativeText: 'LinkedIn',
       iconPath: './assets/svg/linkedIn.svg',
-      url: 'https://www.linkedin.com/in/jochoa-gaviria/' //TODO: take it from env
+      url: environment.linkedinUrl
     }
   ]
 }

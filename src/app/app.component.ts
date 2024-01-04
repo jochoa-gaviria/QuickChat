@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
-import { MenuItem } from './core/models/menu-item';
+import { MenuItem } from './core/models/menu-item.model';
 
 @Component({
   selector: 'app-root',

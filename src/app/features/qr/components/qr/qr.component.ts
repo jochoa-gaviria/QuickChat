@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UrlData } from '@qr/models/url-data';
+import { UrlData } from '@qr/models/url-data.model';
 
 @Component({
   selector: 'app-qr',

@@ -7,12 +7,14 @@ import { LocalStorageService } from '../../../../core/services/storage.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+  
+  private localStorageService = inject(LocalStorageService);
+  
   phoneNumber = signal<string>('');
   storageKey = 'phoneNumber';
 
   injector = inject(Injector);
-
-  constructor(private localStorageService: LocalStorageService) { }
+  
 
   ngOnInit(): void {
     const storage = this.localStorageService.getPhoneNumberItem();

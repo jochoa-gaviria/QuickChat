@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
-  private phoneStorageKey = 'phoneNumber'; //TODO: take it from env
+  private phoneStorageKey = environment.phoneStorageKey;
 
-  constructor(private cookieService: CookieService) { }
+  private cookieService = inject(CookieService);
   
   setPhoneNumberItem(phoneNumber: string) : void {
     this.cookieService.set(this.phoneStorageKey, phoneNumber);
