@@ -36,4 +36,5 @@ export class HomeComponent implements OnInit {
   onInvalidNumberEvent() {
     this.phoneNumber.set('');
   }
+  
 }

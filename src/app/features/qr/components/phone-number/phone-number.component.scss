@@ -9,7 +9,9 @@
     margin: 0 auto;
     padding-bottom: 2em;
 
+
     .cellphone-input {
+        flex-grow: 2;
         margin: 0;
         width: 100%;
         font-size: 24px;
@@ -21,23 +23,46 @@
         padding: 6px;
         border: 1px solid #2D9596;
         box-shadow: inset 0 -1px 5px 0 rgba(45, 149, 150, 0.2);
-        box-sizing: border-box; 
-        border-radius: 6px;
+        box-sizing: border-box;
+        border-radius: 10px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
         &.error {
             border: 1px solid red;
             box-shadow: inset 0 -1px 5px 0 rgba(220, 20, 60, 0.2);
-            box-sizing: border-box;  
+            box-sizing: border-box;
         }
     }
-    
+
+    .cellphone-input:focus {
+        outline: none;
+    }
+
+    .cellphone-clear--span {
+        z-index: 10;
+        position: absolute;
+        padding-top: 55px;
+        padding-right: 20px;
+        transition: all linear 0.6s;
+        opacity: 0;
+
+        &.show {
+            opacity: 1;
+        }
+
+        .eraser {
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+
     .error-input {
         opacity: 0;
         color: #ECF4D6;
         font-size: 1em;
         transition: all linear .5s;
+
         &.active {
             opacity: 1;
         }

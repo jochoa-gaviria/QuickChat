@@ -4,7 +4,7 @@
             @for (item of socialMediaItems; track $index) {
             <li>
                 <a [href]="item.url" target="_blank" class="link">
-                    <i class="icon"><img [src]="item.iconPath" alt="x-twitter">{{item.title}}</i>
+                    <i class="icon"><img [src]="item.iconPath" [alt]="item.alternativeText">{{item.title}}</i>
                 </a>
             </li>
             }

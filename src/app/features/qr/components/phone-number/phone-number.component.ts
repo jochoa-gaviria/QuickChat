@@ -48,4 +48,9 @@ export class PhoneNumberComponent implements OnInit {
     }
   }
 
+  cleanInput() {
+    this.phoneNumberCtrl.reset();
+    this.invalidNumberEvent.emit(true);
+  }
+
 }
