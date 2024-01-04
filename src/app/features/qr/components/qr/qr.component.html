@@ -1,0 +1,8 @@
+<section class="container" [class.show]="apiUrlData?.isValid">
+    <div (click)="openUrl()" class="qr-container">
+        <qr-code [value]="apiUrlData?.url" size="350" lightColor="#66000000" darkColor="#075E54"
+            errorCorrectionLevel="M" centerImageSize="110" centerImageSrc="/assets/svg/whatsapp.svg">
+        </qr-code>
+    </div>
+    <app-url class="click-me" [url]="apiUrlData?.url" [text]="MESSAGE_URL"></app-url>
+</section>

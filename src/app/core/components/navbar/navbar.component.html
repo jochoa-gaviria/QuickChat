@@ -1,0 +1,20 @@
+<section class="mobile">
+
+</section>
+
+<section class="web">
+    <header class="header">
+        <nav>
+            <a class="logo" routerLink="QuickChat">
+                <img src="" alt="logo">
+            </a>
+            <ul>
+                @for (item of items; track $index) {
+                    <li>
+                        <a routerLinkActive="active" [routerLink]="item.url" >{{item.name}}</a>
+                    </li>   
+                }
+            </ul>
+        </nav>
+    </header>
+</section>

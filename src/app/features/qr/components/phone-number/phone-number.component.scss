@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column-reverse;
+    padding-top: 5px;
+    min-width: 230px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+
+    .cellphone-input {
+        margin: 0;
+        width: 100%;
+        font-size: 24px;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: 1.4em;
+        text-align: center;
+        background-color: #F6F3E2;
+        padding: 6px;
+        border: 1px solid #2D9596;
+        box-shadow: inset 0 -1px 5px 0 rgba(45, 149, 150, 0.2);
+        box-sizing: border-box; 
+        border-radius: 6px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &.error {
+            border: 1px solid red;
+            box-shadow: inset 0 -1px 5px 0 rgba(220, 20, 60, 0.2);
+            box-sizing: border-box;  
+        }
+    }
+    
+    .error-input {
+        opacity: 0;
+        color: #ECF4D6;
+        font-size: 1em;
+        transition: all linear .5s;
+        &.active {
+            opacity: 1;
+        }
+    }
+}

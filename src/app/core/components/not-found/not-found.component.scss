@@ -1,0 +1,21 @@
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        padding: 5em;
+        width: 50%;
+        object-fit: contain; 
+    }
+    
+    figcaption {
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.5em;
+        color: #ECF4D6;
+        text-shadow: 0 0 1px #265073, 0 0 1px #265073;
+    }
+}
