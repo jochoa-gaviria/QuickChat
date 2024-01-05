@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { LocalStorageService } from '../../../../core/services/storage.service';
+import { LocalStorageService } from '@core/services/storage.service';
+import { LanguajeService } from '@core/services/languaje.service';
+import { Messages } from '@core/models/messages.model';
 
 @Component({
   selector: 'app-phone-number',
@@ -12,8 +14,10 @@ export class PhoneNumberComponent implements OnInit {
   private PHONE_NUMBER_REGEX = new RegExp(/^(\+?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})$/);
   private NON_NUMBER_REGEX = new RegExp(/\D/g);
   private SOME_TIME_WAS_VALID = false;
+  messages!: Messages;
 
   private localStorageService = inject(LocalStorageService);
+  private langService = inject(LanguajeService);
 
   phoneNumberCtrl = new FormControl("", {
     nonNullable: true,
@@ -24,6 +28,7 @@ export class PhoneNumberComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    this.messages = this.langService.getMessages();
     const storage = this.localStorageService.getPhoneNumberItem();
     if (storage) {
       this.phoneNumberCtrl.setValue(storage);

@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { UrlData } from '@qr/models/url-data.model';
+import { LanguajeService } from '@core/services/languaje.service';
+import { Messages } from '@core/models/messages.model';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-qr',
@@ -7,16 +10,17 @@ import { UrlData } from '@qr/models/url-data.model';
   templateUrl: './qr.component.html',
   styleUrl: './qr.component.scss'
 })
-export class QrComponent {
-  private URL_BASE = 'https://api.whatsapp.com/send?phone=';
-  MESSAGE_URL = "Don't you have a camera? Click here"; 
+export class QrComponent implements OnInit {
+  private langService = inject(LanguajeService);
+  private urlBase = environment.whatsAppUrlBase;
+  messages!: Messages;
   apiUrlData?: UrlData;
 
   @Input({ required: true }) set phoneNumber(phoneNumber: string) {
     if (phoneNumber) 
     {
       this.apiUrlData = {
-        url: `${this.URL_BASE}${phoneNumber}`,
+        url: `${this.urlBase}${phoneNumber}`,
         isValid: true
       };
     }
@@ -25,6 +29,10 @@ export class QrComponent {
         isValid: false
       }
     }
+  }
+
+  ngOnInit(): void {
+    this.messages = this.langService.getMessages();
   }
 
   openUrl() {

@@ -26,6 +26,12 @@
     "paths": {
       "@qr/*": [
         "./src/app/features/qr/*"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@environments/*": [
+        "./src/environments/*"
       ]
     }
   },

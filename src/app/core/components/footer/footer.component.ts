@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SocialMediaItem } from '../../models/social-media-item.model';
-import { environment } from '../../../../environments/environment.development';
+import { SocialMediaItem } from '@core/models/social-media-item.model';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-footer',
